@@ -25,13 +25,13 @@ datarefresh = 1
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
 
-pilltime = 0 
+pilltime 
 
 def Update_Capstone():
 
 	pillhour = firebase.get('/Cureent Schedule/Darel Diaz/Hours1',None)
 
-	pilltime = int(pillhour)
+	#pilltime = int(pillhour)
 
 	return pilltime
 
