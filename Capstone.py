@@ -69,20 +69,21 @@ def moror1_down():
 			GPIO.setup(pin2,GPIO.OUT)
 			GPIO.output(pin2,0)
 
-		seq2 = [ [1,0,0,0],
-			     [1,1,0,0],
-	 	 	     [0,1,0,0],
-	 	 	     [0,1,1,0],
-	 	 		 [0,0,1,0],
-	 	 		 [0,0,1,1],
-	 	 		 [0,0,0,1],
-	 	 		 [1,0,0,1]  ]
+	seq2 = [ [1,0,0,0],
+	         [1,1,0,0],
+	         [0,1,0,0],
+	         [0,1,1,0],
+	 	 [0,0,1,0],
+	 	 [0,0,1,1],
+	 	 [0,0,0,1],
+	 	 [1,0,0,1]  ]
 
-		for i in range (512):
-			for halfstep in range(8):
-				for pin2 in range(4):
-					GPIO.output(ControlPin2[pin2], seq2[halfstep][pin2])
-				time.sleep(0.001)
+	for i in range (512):
+		for halfstep in range(8):
+			for pin2 in range(4):
+				GPIO.output(ControlPin2[pin2], seq2[halfstep][pin2])
+				
+			time.sleep(0.001)
 		
 
 def capstone():
