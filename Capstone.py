@@ -25,13 +25,15 @@ datarefresh = 1
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
 
+pilltime = 0 
+
 def Update_Capstone():
 
 	pillhour = firebase.get('/Cureent Schedule/Darel Diaz/Hours1',None)
 
-#int_pilltime = int(pilltime)
+	pilltime = int(pillhour)
 
-
+	 return pilltime
 
 def rc_time(photores):
 	count=0
