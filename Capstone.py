@@ -33,7 +33,7 @@ def Update_Capstone():
 
 	pilltime = int(pillhour)
 
-	 return pilltime
+	return pilltime
 
 def rc_time(photores):
 	count=0
