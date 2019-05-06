@@ -16,6 +16,8 @@ def Update():
 def Work():
 	print ("please")
 
+
+
 pleasetime = Update()
 
 schedule.every(datarefresh).minutes.do(Update)
@@ -25,6 +27,6 @@ schedule.every(pleasetime).minutes.do(Work)
 while True:
 
 	schedule.run_pending()
-	#schedule.cancel_job(Work)
+	schedule.cancel_job(Work)
 
 	time.sleep(1)
