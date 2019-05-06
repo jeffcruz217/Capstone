@@ -25,7 +25,11 @@ datarefresh = 1
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
 
-pilltime 
+pillhour = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
+
+pilltime = int(pillhour)
+
+	
 
 def Update_Capstone():
 
