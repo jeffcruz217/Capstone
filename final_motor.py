@@ -1,5 +1,3 @@
-#this is a test, PLEASE WORK
-
 import RPi.GPIO as GPIO
 import time
 from Adafruit_CharLCD import Adafruit_CharLCD
@@ -43,12 +41,7 @@ def rc_time(photores):
 		count += 1
 	return count
 
-def capstone():
-
-
-	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
-	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
-
+def motor1_up():
 	for pin in ControlPin:
 		GPIO.setup(pin,GPIO.OUT)
 		GPIO.output(pin,0)
@@ -68,6 +61,39 @@ def capstone():
 				GPIO.output(ControlPin[pin], seq[halfstep][pin])
 
 			time.sleep(0.001)
+	
+
+def moror1_down():
+
+	for pin2 in ControlPin2:
+			GPIO.setup(pin2,GPIO.OUT)
+			GPIO.output(pin2,0)
+
+		seq2 = [ [1,0,0,0],
+			     [1,1,0,0],
+	 	 	     [0,1,0,0],
+	 	 	     [0,1,1,0],
+	 	 		 [0,0,1,0],
+	 	 		 [0,0,1,1],
+	 	 		 [0,0,0,1],
+	 	 		 [1,0,0,1]  ]
+
+		for i in range (512):
+			for halfstep in range(8):
+				for pin2 in range(4):
+					GPIO.output(ControlPin2[pin2], seq2[halfstep][pin2])
+				time.sleep(0.001)
+		
+
+def capstone():
+
+
+	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
+	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
+
+#/////////////////////////////////1
+	
+	motor1_up()
 
 
 	lcd.message("Pill Name: " + message_motor1 + "\n" + "Take: " +  message2_motor1 + " pill")
@@ -78,46 +104,18 @@ def capstone():
 		lcd.message('Times up')
 		firebase.post('/test',message)
 
-		for pin2 in ControlPin2:
-			GPIO.setup(pin2,GPIO.OUT)
-			GPIO.output(pin2,0)
+		#//////////////////////////////////2
+		moror1_down()
 
-		seq2 = [ [1,0,0,0],
-			 [1,1,0,0],
-	 	 	 [0,1,0,0],
-	 	 	 [0,1,1,0],
-	 	 	 [0,0,1,0],
-	 	 	 [0,0,1,1],
-	 	 	 [0,0,0,1],
-	 	 	 [1,0,0,1]  ]
-
-		for i in range (512):
-			for halfstep in range(8):
-				for pin2 in range(4):
-					GPIO.output(ControlPin2[pin2], seq2[halfstep][pin2])
-				time.sleep(0.001)
 		lcd.clear()
+	
+
 	else:
 		firebase.post('/test',message2)
 
-		for pin2 in ControlPin2:
-			GPIO.setup(pin2,GPIO.OUT)
-			GPIO.output(pin2,0)
-
-		seq2 = [ [1,0,0,0],
-			 [1,1,0,0],
-	 	 	 [0,1,0,0],
-	 	 	 [0,1,1,0],
-	 	 	 [0,0,1,0],
-	 	 	 [0,0,1,1],
-	 	 	 [0,0,0,1],
-	 	 	 [1,0,0,1]  ]
-
-		for i in range (512):
-			for halfstep in range(8):
-				for pin2 in range(4):
-					GPIO.output(ControlPin2[pin2], seq2[halfstep][pin2])
-				time.sleep(0.001)
+		#///////////////////////////2
+		moror1_down()
+		
 		lcd.clear()
 
 schedule.every(pilltime).minutes.do(capstone)
