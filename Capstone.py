@@ -135,10 +135,8 @@ schedule.every(datarefresh).minutes.do(Update_Capstone)
 
 while True:
 	pilltime2 = Update_Capstone()
-	schedule.every(pilltime2).minutes.do(capstone)
 
-
-
+schedule.every(pilltime2).minutes.do(capstone)
 
 
 while True:

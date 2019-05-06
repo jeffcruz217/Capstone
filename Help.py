@@ -3,4 +3,9 @@ firebase = firebase.FirebaseApplication('https://pillreminder2-c8807.firebaseio.
 
 pillhour = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
-print(pillhour,"is of type", type(pillhour))
+pilltime2 = int(pillhour)
+
+def Work:
+	print ("please")
+
+schedule.every(pilltime2).minutes.do(Work)
