@@ -131,9 +131,9 @@ def capstone():
 		lcd.clear()
 
 
-schedule.every(datarefresh).minutes.do(Update_Capstone)
-
 pilltime2 = Update_Capstone()
+
+schedule.every(datarefresh).minutes.do(Update_Capstone)
 
 schedule.every(pilltime2).minutes.do(capstone)
 
@@ -141,6 +141,7 @@ schedule.every(pilltime2).minutes.do(capstone)
 
 while True:
 
+	pilltime2 = Update_Capstone()
 	schedule.run_pending()
 	time.sleep(1)
 
