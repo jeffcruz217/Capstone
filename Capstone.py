@@ -31,26 +31,6 @@ message2 = ("Pill was Taken")
 #pilltime = int(pillhour)
 
 
-schedule.every(datarefresh).minutes.do(Update_Capstone)
-
-
-while True:
-	pilltime2 = Update_Capstone()
-	schedule.every(pilltime2).minutes.do(capstone)
-
-
-
-
-
-while True:
-
-	schedule.run_pending()
-	time.sleep(1)
-
-
-
-
-
 def Update_Capstone():
 
 	pillhour = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
@@ -150,6 +130,21 @@ def capstone():
 		lcd.clear()
 
 
+schedule.every(datarefresh).minutes.do(Update_Capstone)
+
+
+while True:
+	pilltime2 = Update_Capstone()
+	schedule.every(pilltime2).minutes.do(capstone)
+
+
+
+
+
+while True:
+
+	schedule.run_pending()
+	time.sleep(1)
 
 
 
