@@ -5,7 +5,7 @@ import time
 firebase = firebase.FirebaseApplication('https://pillreminder2-c8807.firebaseio.com/',None)
 datarefresh = 0
  
-def Update:
+def Update():
 
 	pillhour = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
