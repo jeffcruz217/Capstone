@@ -25,6 +25,6 @@ def Work():
 while True:
 
 	schedule.run_pending()
-	schedule.cancel_job(Work)
+	#schedule.cancel_job(Work)
 
 	time.sleep(1)
