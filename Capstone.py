@@ -25,7 +25,7 @@ datarefresh = 1
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
 
-pilltime = None
+pilltime 
 
 def Update_Capstone():
 
@@ -128,7 +128,6 @@ def capstone():
 
 schedule.every(datarefresh).minutes.do(Update_Capstone)
 
-time.sleep(120)
 
 schedule.every(pilltime).minutes.do(capstone)
 
