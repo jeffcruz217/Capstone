@@ -17,16 +17,14 @@ def Work():
 	print ("please")
 
 
-
-pleasetime = Update()
-
-schedule.every(datarefresh).minutes.do(Update)
-
-schedule.every(pleasetime).minutes.do(Work)
-
 while True:
+	pleasetime = Update()
 
-	schedule.run_pending()
-	schedule.cancel_job(Work)
+	schedule.every(datarefresh).minutes.do(Update)
 
-	time.sleep(1)
+	schedule.every(pleasetime).minutes.do(Work)
+
+
+	#schedule.cancel_job(Work)
+
+	
