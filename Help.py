@@ -15,12 +15,12 @@ def Update():
 
 def Work():
 	print ("please")
-	
-	pleasetime = Update()
 
-	schedule.every(datarefresh).minutes.do(Update)
+pleasetime = Update()
 
-	schedule.every(pleasetime).minutes.do(Work)
+schedule.every(datarefresh).minutes.do(Update)
+
+schedule.every(pleasetime).minutes.do(Work)
 
 while True:
 
