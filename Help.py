@@ -15,8 +15,6 @@ def Update():
 
 def Work():
 	print ("please")
-
-while True:
 	
 	pleasetime = Update()
 
