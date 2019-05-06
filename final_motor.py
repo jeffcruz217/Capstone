@@ -1,3 +1,5 @@
+#this is a test, PLEASE WORK
+
 import RPi.GPIO as GPIO
 import time
 from Adafruit_CharLCD import Adafruit_CharLCD
