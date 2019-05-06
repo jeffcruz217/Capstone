@@ -23,7 +23,7 @@ while True:
 
 	schedule.every(datarefresh).minutes.do(Update)
 	print("first")
-	schedule.every(pleasetime).minutes.do(Work)
+	schedule.every(pleasetime).minutes.do(Work())
 	print("second")
 
 	#schedule.cancel_job(Work)
