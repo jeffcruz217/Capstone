@@ -10,3 +10,8 @@ def Work():
 	print ("please")
 
 schedule.every(pilltime2).minutes.do(Work)
+
+while True:
+
+	schedule.run_pending()
+	time.sleep(1)
