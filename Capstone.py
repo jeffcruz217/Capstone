@@ -25,7 +25,7 @@ datarefresh = 1
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
 
-pilltime 
+pilltime = None
 
 def Update_Capstone():
 
