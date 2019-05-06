@@ -125,6 +125,8 @@ def capstone():
 
 		lcd.clear()
 
+time.sleep(120)
+
 schedule.every(pilltime).minutes.do(capstone)
 
 schedule.every(datarefresh).minutes.do(Update_Capstone)
