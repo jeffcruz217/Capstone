@@ -133,7 +133,7 @@ def capstone():
 
 schedule.every(datarefresh).minutes.do(Update_Capstone)
 
-pilltime2 = Update_Capstone
+pilltime2 = Update_Capstone()
 
 schedule.every(pilltime2).minutes.do(capstone)
 
