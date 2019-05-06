@@ -11,11 +11,13 @@ def Update():
 
 	pilltime2 = int(pillhour)
 
+	return pilltime2
+
 def Work():
 	print ("please")
 
 schedule.every(datarefresh).minutes.do(Update)
-schedule.every(pilltime2).minutes.do(Work)
+schedule.every(Update).minutes.do(Work)
 
 while True:
 
