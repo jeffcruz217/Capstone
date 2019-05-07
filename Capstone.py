@@ -14,9 +14,9 @@ lcd = Adafruit_CharLCD(rs=26,en=19,
 		cols=16,lines=2)
 lcd.clear()
 
-ControlPin = [4,17,21,22]
+ControlPin = [4,17,27,22]
 
-ControlPin2 = [22,21,17,4]
+ControlPin2 = [22,27,17,4]
 
 photores = 23
 
