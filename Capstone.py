@@ -22,7 +22,7 @@ photores = 23
 
 please = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
-pleasetime= int(please)
+pleasetime2= int(please)
 
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
