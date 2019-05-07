@@ -42,7 +42,7 @@ message2 = ("Pill was Taken")
 #	quantity = int(quant)
 
 #	return quantity
-def buzzer(buzzer):
+def buzz(buzzer):
 	GPIO.setup(buzzer,GPIO.OUT)
 	GPIO.output(buzzer,GPIO.HIGH)
 	GPIO.output(buzzer,GPIO.HIGH)
@@ -88,7 +88,7 @@ def motor1_up():
 				GPIO.output(ControlPin[pin], seq[halfstep][pin])
 
 			time.sleep(0.001)
-	buzzer()
+	buzz(buzzer)
 
 def moror1_down():
 
