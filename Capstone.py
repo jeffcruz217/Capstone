@@ -27,11 +27,11 @@ pilltime2= int(please)
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
 
+def quantity():
+	quant = firebase.get('/Current Schedule/Darel Diaz/Qty1', None)
+	quantity = int(quant)
 
-#pillhour = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
-
-#pilltime = int(pillhour)
-
+	return quantity
 
 def Update_Capstone():
 
@@ -103,6 +103,8 @@ def capstone():
 	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
 
+	Dose = int(message2_motor1)
+
 #/////////////////////////////////1
 	
 	motor1_up()
@@ -123,14 +125,20 @@ def capstone():
 	
 
 	else:
+		qty = quantity()
+		newqty = qty - Dose
 
 		firebase.post('/test',message2)
-
+		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 		#///////////////////////////2
+
+	if newqty <= Dose:
+		lcd.message("Youre running out of pills \n Head to the pharmacy")
+
+	else:
 		moror1_down()
 
 		lcd.clear()
-
 
 def conv(pleaseetime):
 
