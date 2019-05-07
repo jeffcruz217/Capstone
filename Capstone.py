@@ -28,7 +28,6 @@ ControlPin2 = [8,25,24,18]
 
 photores = 23
 
-buzzer = 10
 
 please = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
@@ -43,6 +42,7 @@ message2 = ("Pill was Taken")
 
 #	return quantity
 def buzz(buzzer):
+	buzzer = 10
 	GPIO.setup(buzzer,GPIO.OUT)
 	GPIO.output(buzzer,GPIO.HIGH)
 	GPIO.output(buzzer,GPIO.HIGH)
