@@ -28,7 +28,7 @@ ControlPin2 = [8,25,24,18]
 
 photores = 23
 
-buzzer = 10
+buzzer = 9
 
 please = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
