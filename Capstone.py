@@ -42,7 +42,7 @@ message2 = ("Pill was Taken")
 #	quantity = int(quant)
 
 #	return quantity
-def buzzer():
+def buzzer(buzzer):
 	GPIO.setup(buzzer,GPIO.OUT)
 	GPIO.output(buzzer,GPIO.HIGH)
 	GPIO.output(buzzer,GPIO.HIGH)
