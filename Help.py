@@ -10,7 +10,8 @@ def Update():
 	pillhour = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
 	pilltime2 = int(pillhour)
-
+	print(pilltime2)
+	
 	return pilltime2
 
 def Work():
