@@ -28,6 +28,8 @@ ControlPin2 = [8,25,24,18]
 
 photores = 23
 
+buzzer = 10
+
 please = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
 pilltime2= int(please)
@@ -40,6 +42,11 @@ message2 = ("Pill was Taken")
 #	quantity = int(quant)
 
 #	return quantity
+def buzzer()
+	GPIO.setup(buzzer,GPIO.OUT)
+	GPIO.output(buzzer,GPIO.HIGH)
+	GPIO.output(buzzer,GPIO.HIGH)
+	GPIO.output(buzzer,GPIO.HIGH)
 
 def Update_Capstone():
 
@@ -81,7 +88,7 @@ def motor1_up():
 				GPIO.output(ControlPin[pin], seq[halfstep][pin])
 
 			time.sleep(0.001)
-	
+	buzzer()
 
 def moror1_down():
 
