@@ -11,7 +11,7 @@ def Update():
 
 	pilltime2 = int(pillhour)
 	print(pilltime2)
-	
+
 	return pilltime2
 
 def Work():
@@ -19,11 +19,14 @@ def Work():
 
 
 while True:
+
 	pleasetime = Update()
 
 	schedule.every(datarefresh).minutes.do(Update)
 
-	schedule.every(pleasetime).minutes.do(Work)
+	time.sleep(pleasetime)
+
+	Work()
 
 
 	schedule.run_pending()
