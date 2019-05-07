@@ -20,7 +20,9 @@ ControlPin2 = [22,21,17,4]
 
 photores = 23
 
-datarefresh = 1
+please = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
+
+pleasetime= int(please)
 
 message = ("Pill wasnt Taken")
 message2 = ("Pill was Taken")
@@ -130,20 +132,21 @@ def capstone():
 		lcd.clear()
 
 
-schedule.every(datarefresh).minutes.do(Update_Capstone)
+def conv(pleaseetime):
+
+	newtime = pleaseetime * 3600
+
+	return newtime
+
 
 
 while True:
+
+	#time.sleep(conv(pilltime2))
+	time.sleep(pilltime2)
+	capstone()
 	pilltime2 = Update_Capstone()
 
-schedule.every(pilltime2).minutes.do(capstone)
-
-
-while True:
-
-	schedule.run_pending()
-	time.sleep(1)
 
 
 
-GPIO.cleanup()
