@@ -18,9 +18,13 @@ lcd.clear()
 
 #ControlPin2 = [22,27,17,4]
 
-ControlPin = [12,16,20,21]
+#ControlPin = [12,16,20,21]
 
-ControlPin2 = [21,20,16,12]
+#ControlPin2 = [21,20,16,12]
+
+ControlPin = [18,24,25,8]
+
+ControlPin2 = [8,25,24,18]
 
 photores = 23
 
