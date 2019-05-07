@@ -132,10 +132,10 @@ def capstone():
 		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 		#///////////////////////////2
 
-	if newqty <= Dose:
-		lcd.message("Youre running out of pills \n Head to the pharmacy")
+	#if newqty <= Dose:
+	#	lcd.message("Youre running out of pills \n Head to the pharmacy")
 
-	else:
+	#else:
 		moror1_down()
 
 		lcd.clear()
