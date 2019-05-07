@@ -26,10 +26,10 @@ ControlPin = [18,24,25,8]
 
 ControlPin2 = [8,25,24,18]
 
-photores = 10
+photores = 23
 
-buzzer = 23
-GPIO.setup(buzzer,GPIO.OUT)
+#buzzer = 10
+#GPIO.setup(buzzer,GPIO.OUT)
 
 please = firebase.get('/Current Schedule/Darel Diaz/Hours1',None)
 
@@ -43,11 +43,11 @@ message2 = ("Pill was Taken")
 #	quantity = int(quant)
 
 #	return quantity
-def buzz(buzzer):
+#def buzz(buzzer):
 
-	GPIO.output(buzzer,GPIO.HIGH)
-	GPIO.output(buzzer,GPIO.HIGH)
-	GPIO.output(buzzer,GPIO.HIGH)
+#	GPIO.output(buzzer,GPIO.HIGH)
+#	GPIO.output(buzzer,GPIO.HIGH)
+#	GPIO.output(buzzer,GPIO.HIGH)
 
 def Update_Capstone():
 
