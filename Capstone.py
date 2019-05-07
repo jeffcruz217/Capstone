@@ -89,7 +89,7 @@ def motor1_up():
 				GPIO.output(ControlPin[pin], seq[halfstep][pin])
 
 			time.sleep(0.001)
-	buzz(buzzer)
+	#buzz(buzzer)
 
 def moror1_down():
 
