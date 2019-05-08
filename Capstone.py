@@ -5,6 +5,7 @@ from firebase import firebase
 import schedule 
 
 GPIO.setmode(GPIO.BCM)
+GPIO.cleanup()
 
 firebase = firebase.FirebaseApplication('https://pillreminder2-c8807.firebaseio.com/',None)
 
