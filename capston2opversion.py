@@ -33,7 +33,7 @@ ControlPin6 = [8,25,24,18]
 
 
 
-photores1 = 23
+photores = 23
 
 #photores2 = 
 
