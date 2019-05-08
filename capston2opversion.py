@@ -369,15 +369,15 @@ def capstone3():
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
 
 	#if rc_time(photores3) > 200000:
-		time.sleep(5)
-		lcd.clear()
-		lcd.message('Times up')
-		firebase.post('/test',message)
+	time.sleep(5)
+	lcd.clear()
+	lcd.message('Times up')
+	firebase.post('/test',message)
 
 		#//////////////////////////////////2
-		moror3_down()
+	moror3_down()
 
-		lcd.clear()
+	lcd.clear()
 	
 
 	#else:
