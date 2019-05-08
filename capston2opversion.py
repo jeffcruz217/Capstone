@@ -79,7 +79,7 @@ def Update_Capstone2():
 
 	pillhour2 = firebase.get('/Current Schedule/Darel Diaz/Hours2',None)
 
-	pilltime22 = int(pillhour)
+	pilltime22 = int(pillhour2)
 
 	return pilltime22
 
@@ -87,7 +87,7 @@ def Update_Capstone3():
 
 	pillhour3 = firebase.get('/Current Schedule/Darel Diaz/Hours3',None)
 
-	pilltime33 = int(pillhour)
+	pilltime33 = int(pillhour3)
 
 	return pilltime33
 
