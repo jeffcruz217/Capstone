@@ -219,7 +219,7 @@ def moror2_down():
 
 
 def motor3_up():
-	for pin in ControlPin5:
+	for pin5 in ControlPin5:
 		GPIO.setup(pin5,GPIO.OUT)
 		GPIO.output(pin5,0)
 
@@ -417,7 +417,7 @@ while True:
 	capstone2()
 
 	if(pilltime4 == pilltime2 == pilltime3):
-		capsstone3()
+		capstone3()
 
 	else:
 		time.sleep(pilltime4 - pilltime3)
