@@ -417,11 +417,11 @@ while True:
 	capstone2()
 
 	if(pilltime4 == pilltime2 == pilltime3):
-		cap3()
+		capsstone3()
 
 	else:
 		time.sleep(pilltime4 - pilltime3)
-		cap3()
+		capstone3()
 
 	pilltime2 = Update_Capstone()
 	pilltime3 = Update_Capstone2()
