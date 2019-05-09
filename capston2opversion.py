@@ -298,8 +298,8 @@ def capstone():
 			new = str(newqty)
 			lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
 
-		datatest = {'Qty2': newqty}
-		firebase.post('/Current Schedule/Darel Diaz', datatest)
+		#datatest = {'Qty2': newqty}
+		firebase.put('/Current Schedule/Darel Diaz/Qty2', newqty)
 
 		moror1_down()
 
