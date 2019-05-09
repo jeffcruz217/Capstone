@@ -277,7 +277,7 @@ def capstone():
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
-		firebase.post('/test',message)
+		
 
 		#//////////////////////////////////2
 		moror1_down()
@@ -289,7 +289,7 @@ def capstone():
 		qty = quantity()
 		newqty = Dose - qty
 
-		#firebase.post('/test',message2)
+		
 		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
 		moror1_down()
@@ -323,8 +323,8 @@ def capstone2():
 	if rc_time(photores2) > 10000:
 		time.sleep(5)
 		lcd.clear()
-		lcd.message('Times up')
-		firebase.post('/test',message)
+		
+		
 
 		#//////////////////////////////////2
 		moror2_down()
@@ -337,7 +337,7 @@ def capstone2():
 		qty = quantity()
 		newqty = Dose - qty
 
-		firebase.post('/test',message2)
+		
 		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
 		moror2_down()
@@ -372,7 +372,7 @@ def capstone3():
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
-		firebase.post('/test',message)
+		
 
 		#//////////////////////////////////2
 		moror3_down()
@@ -384,7 +384,7 @@ def capstone3():
 		qty = quantity()
 		newqty = Dose - qty
 
-		firebase.post('/test',message2)
+		
 		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
 		moror3_down()
