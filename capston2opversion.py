@@ -290,20 +290,22 @@ def capstone():
 		qty = quantity()
 		newqty = Dose - qty
 
-		
+		if newqty <= Dose:
+			lcd.message("Youre out of pills \n Head to the pharmacy")
+
+			lcd.clear()
+		else:
+			lcd.message("You have " + newqty + "pills" + "\n" + "of" + message_motor1)
+
+			
 		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
 		moror1_down()
 
+		lcd.clear()
 		#///////////////////////////2
 
-	if newqty <= Dose:
-		lcd.message("Youre out of pills \n Head to the pharmacy")
-
-	else:
-		moror1_down()
-
-		lcd.clear()
+		
 
 
 def capstone2():
