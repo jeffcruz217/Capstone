@@ -56,7 +56,7 @@ pilltime4= int(please3)
 
 
 def quantity():
-	quant = firebase.get('/Current Schedule/Darel Diaz/Qty1', None)
+	quant = firebase.get('/Current Schedule/Darel Diaz/Qty2', None)
 	quantity = int(quant)
 
 	return quantity
