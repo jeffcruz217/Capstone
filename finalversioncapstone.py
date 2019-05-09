@@ -312,7 +312,7 @@ def capstone():
 			new = str(newqty)
 			lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
 
-		datatest = {'Qty1': newqty}
+		datatest = {'Qty1', newqty}
 		firebase.put('/Current Schedule/Darel Diaz', datatest)
 
 		moror1_down()
@@ -362,7 +362,7 @@ def capstone2():
 			new2 = str(newqty2)
 			lcd.message("You have " + new2 + "pills" + "\n" + "of" + message_motor1)
 
-		datatest2 = {'Qty2': newqty2}
+		datatest2 = {'Qty2', newqty2}
 		firebase.put('/Current Schedule/Darel Diaz', datatest2)
 		moror2_down()
 
@@ -415,7 +415,7 @@ def capstone3():
 			new3 = str(newqty)
 			lcd.message("You have " + new3 + "pills" + "\n" + "of" + message_motor1)
 
-		datatest3 = {'Qty3': newqty3}
+		datatest3 = {'Qty3', newqty3}
 		firebase.put('/Current Schedule/Darel Diaz', datatest3)
 
 		moror3_down()
