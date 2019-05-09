@@ -285,6 +285,7 @@ def capstone():
 
 
 	lcd.message("Pill Name: " + message_motor1 + "\n" + "Take: " +  message2_motor1 + " pill")
+	time.sleep(2)
 
 	if rc_time(photores) > 30000:
 		time.sleep(5)
@@ -337,8 +338,9 @@ def capstone2():
 
 
 	lcd.message("Pill Name: " + message_motor2 + "\n" + "Take: " +  message2_motor2 + " pill")
+	time.sleep(2)
 
-	if rc_time(photores2) > 10000:
+	if rc_time(photores2) > 20000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
@@ -389,8 +391,9 @@ def capstone3():
 
 
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
+	time.sleep(2)
 
-	if rc_time(photores3) > 10000:
+	if rc_time(photores3) > 20000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
@@ -418,7 +421,7 @@ def capstone3():
 		#datatest = {'Qty2': newqty3}
 		#firebase.put('/Current Schedule/Darel Diaz/Qty2', newqty3)
 
-		moror1_down()
+		moror3_down()
 
 		lcd.clear()
 
