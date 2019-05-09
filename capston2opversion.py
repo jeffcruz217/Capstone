@@ -313,6 +313,7 @@ def capstone():
 
 def capstone2():
 
+	motor2_up()
 
 	message_motor2 = firebase.get('/Current Schedule/Darel Diaz/Name2',None)
 	message2_motor2 = firebase.get('/Current Schedule/Darel Diaz/Dose2',None)
@@ -321,7 +322,7 @@ def capstone2():
 
 #/////////////////////////////////1
 	
-	motor2_up()
+	
 
 
 	lcd.message("Pill Name: " + message_motor2 + "\n" + "Take: " +  message2_motor2 + " pill")
@@ -329,7 +330,7 @@ def capstone2():
 	if rc_time(photores2) > 10000:
 		time.sleep(5)
 		lcd.clear()
-		
+		lcd.message('Times up')
 		
 
 		#//////////////////////////////////2
@@ -348,6 +349,7 @@ def capstone2():
 
 		moror2_down()
 
+		lcd.clear()
 		#///////////////////////////2
 
 	#if newqty <= Dose:
@@ -361,15 +363,16 @@ def capstone2():
 
 def capstone3():
 
+	motor3_up()
 
-	message_motor3 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
-	message2_motor3 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
+	message_motor3 = firebase.get('/Current Schedule/Darel Diaz/Name3',None)
+	message2_motor3 = firebase.get('/Current Schedule/Darel Diaz/Dose3',None)
 
 	Dose = int(message2_motor3)
 
 #/////////////////////////////////1
 	
-	motor3_up()
+	
 
 
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
@@ -395,7 +398,7 @@ def capstone3():
 		#firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
 		moror3_down()
-
+		lcd.clear()
 		#///////////////////////////2
 
 	#if newqty <= Dose:
