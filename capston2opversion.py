@@ -58,7 +58,7 @@ message = ("Pill wasnt Taken")
 
 message2 = ("Pill was Taken")
 
-
+newqty = 0 
 
 def quantity():
 	quant = firebase.get('/Current Schedule/Darel Diaz/Qty1', None)
