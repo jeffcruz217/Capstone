@@ -284,7 +284,7 @@ def moror3_down():
 def capstone():
 
 	
-	motor1_down()
+	moror1_down()
 
 	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
@@ -306,7 +306,7 @@ def capstone():
 		
 
 		#//////////////////////////////////2
-		moror1_up()
+		motor1_up()
 
 		lcd.clear()
 	
@@ -331,7 +331,7 @@ def capstone():
 		#datatest = {"Qty1": newqty}
 		firebase.put('/Current Schedule/Darel Diaz', "Qty1", strqty)
 
-		moror1_up()
+		moror1_down()
 
 		lcd.clear()
 		#///////////////////////////2
