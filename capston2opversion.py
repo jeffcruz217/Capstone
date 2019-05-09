@@ -286,20 +286,20 @@ def capstone():
 	
 
 	else:
-		newqty = 0 
-		qty = quantity()
-		newqty = qty - Dose
+		#newqty = 0 
+		#qty = quantity()
+		#newqty = qty - Dose
 
-		if newqty <= Dose:
-			lcd.message("Youre running out of pills \n Head to the pharmacy")
+		#if newqty <= Dose:
+			#lcd.message("Youre running out of pills \n Head to the pharmacy")
 
-			lcd.clear()
-		else:
-			new = str(newqty)
-			lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
+			#lcd.clear()
+		#else:
+			#new = str(newqty)
+			#lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
 
 		#datatest = {'Qty2': newqty}
-		firebase.put('/Current Schedule/Darel Diaz/Qty2', newqty)
+		#firebase.put('/Current Schedule/Darel Diaz/Qty2', newqty)
 
 		moror1_down()
 
@@ -337,24 +337,24 @@ def capstone2():
 	
 
 	else:
-		newqty = 0 
-		qty = quantity()
-		newqty = Dose - qty
+		#newqty = 0 
+		#qty = quantity()
+		#newqty = Dose - qty
 
 		
-		newqty = firebase.post('/Current Schedule/Darel Diaz/Qty1', None)
+		#newqty = firebase.post('/Current Schedule/Darel Diaz/Qty1', None)
 
 		moror2_down()
 
 		#///////////////////////////2
 
-	if newqty <= Dose:
-		lcd.message("Youre running out of pills \n Head to the pharmacy")
+	#if newqty <= Dose:
+		#lcd.message("Youre running out of pills \n Head to the pharmacy")
 
-	else:
-		moror2_down()
+	#else:
+		#moror2_down()
 
-		lcd.clear()
+		#lcd.clear()
 
 
 def capstone3():
@@ -385,24 +385,24 @@ def capstone3():
 	
 
 	else:
-		newqty = 0 
-		qty = quantity()
-		newqty = Dose - qty
+		#newqty = 0 
+		#qty = quantity()
+		#newqty = Dose - qty
 
 		
-		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+		#firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
 		moror3_down()
 
 		#///////////////////////////2
 
-	if newqty <= Dose:
-		lcd.message("Youre running out of pills \n Head to the pharmacy")
+	#if newqty <= Dose:
+		#lcd.message("Youre running out of pills \n Head to the pharmacy")
 
-	else:
-		moror3_down()
+	#else:
+		#moror3_down()
 
-		lcd.clear()
+		#lcd.clear()
 
 
 
