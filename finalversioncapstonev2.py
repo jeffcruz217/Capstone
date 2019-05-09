@@ -61,9 +61,9 @@ pilltime4= int(please3)
 
 def buzzer_beep():
 	GPIO.output(buzzer,GPIO.HIGH)
-	time.sleep(2)
+	sleep(2)
 	GPIO.output(buzzer,GPIO.LOW)
-	time.sleep(2)
+	sleep(2)
 def buzzer_off():
 	GPIO.output(buzzer,GPIO.LOW)
 
@@ -340,7 +340,7 @@ def capstone():
 
 def capstone2():
 
-	motor2_up()
+	moror2_down()
 
 	message_motor2 = firebase.get('/Current Schedule/Darel Diaz/Name2',None)
 	message2_motor2 = firebase.get('/Current Schedule/Darel Diaz/Dose2',None)
@@ -349,9 +349,10 @@ def capstone2():
 
 #/////////////////////////////////1
 	
-	
+	buzzer_beep()
 	lcd.message("Pill Name: " + message_motor2 + "\n" + "Take: " +  message2_motor2 + " pill")
 	time.sleep(2)
+	buzzer_off()
 
 	if rc_time(photores2) > 20000:
 		time.sleep(5)
@@ -360,7 +361,7 @@ def capstone2():
 		
 
 		#//////////////////////////////////2
-		moror2_down()
+		motor2_up()
 
 		lcd.clear()
 	
@@ -385,7 +386,7 @@ def capstone2():
 		#datatest2 = {"Qty2": newqty2}
 		firebase.put('/Current Schedule/Darel Diaz', "Qty2", strqty2)
 
-		moror2_down()
+		motor2_up()
 
 		lcd.clear()
 		#///////////////////////////2
@@ -396,7 +397,7 @@ def capstone2():
 
 def capstone3():
 
-	motor3_up()
+	moror3_down()
 
 	message_motor3 = firebase.get('/Current Schedule/Darel Diaz/Name3',None)
 	message2_motor3 = firebase.get('/Current Schedule/Darel Diaz/Dose3',None)
@@ -407,10 +408,10 @@ def capstone3():
 	
 	
 
-
+	buzzer_beep()
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
 	time.sleep(2)
-
+	buzzer_off()
 	if rc_time(photores3) > 20000:
 		time.sleep(5)
 		lcd.clear()
@@ -418,7 +419,7 @@ def capstone3():
 		
 
 		#//////////////////////////////////2
-		moror3_down()
+		motor3_up()
 
 		lcd.clear()
 	
@@ -443,7 +444,7 @@ def capstone3():
 		#datatest3 = {"Qty3": newqty3}
 		firebase.put('/Current Schedule/Darel Diaz', "Qty3", strqty3)
 
-		moror3_down()
+		motor3_up()
 
 		lcd.clear()
 
