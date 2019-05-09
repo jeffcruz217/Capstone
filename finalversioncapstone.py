@@ -364,7 +364,7 @@ def capstone2():
 			lcd.clear()
 		else:
 			new2 = str(newqty2)
-			lcd.message("You have " + new2 + "pills" + "\n" + "of" + message_motor1)
+			lcd.message("You have " + new2 + "pills" + "\n" + "of" + message_motor2)
 
 		#datatest2 = {"Qty2": newqty2}
 		firebase.put('/Current Schedule/Darel Diaz', "Qty2", strqty2)
@@ -420,7 +420,7 @@ def capstone3():
 			lcd.clear()
 		else:
 			new3 = str(newqty3)
-			lcd.message("You have " + new3 + "pills" + "\n" + "of" + message_motor1)
+			lcd.message("You have " + new3 + "pills" + "\n" + "of" + message_motor3)
 
 		#datatest3 = {"Qty3": newqty3}
 		firebase.put('/Current Schedule/Darel Diaz', "Qty3", strqty3)
