@@ -61,7 +61,7 @@ pilltime4= int(please3)
 
 def buzzer_beep():
 	GPIO.output(buzzer,GPIO.HIGH)
-    time.sleep(2) 
+    time.sleep(2)
     GPIO.output(buzzer,GPIO.LOW)
     time.sleep(2)
 
