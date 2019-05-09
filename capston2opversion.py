@@ -286,6 +286,7 @@ def capstone():
 	
 
 	else:
+		newqty = 0 
 		qty = quantity()
 		newqty = Dose - qty
 
@@ -381,6 +382,7 @@ def capstone3():
 	
 
 	else:
+		newqty = 0 
 		qty = quantity()
 		newqty = Dose - qty
 
