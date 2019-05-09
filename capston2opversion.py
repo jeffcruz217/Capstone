@@ -35,9 +35,9 @@ ControlPin6 = [8,25,24,18]
 
 photores = 23
 
-#photores2 = 
+photores2 = 9
 
-#photores3 = 
+photores3 = 10
 
 
 
@@ -104,29 +104,29 @@ def rc_time(photores):
 		count += 1
 	return count
 
-#def rc_time2(photores2):
-#	count=0
-#	GPIO.setup(photores2,GPIO.OUT)
-#	GPIO.output(photores2,GPIO.LOW)
-#	time.sleep(0.1)
+def rc_time2(photores2):
+	count=0
+	GPIO.setup(photores2,GPIO.OUT)
+	GPIO.output(photores2,GPIO.LOW)
+	time.sleep(0.1)
 
-#	GPIO.setup(photores2,GPIO.IN)
+	GPIO.setup(photores2,GPIO.IN)
 
-#	while (GPIO.input(photores2) == GPIO.LOW):
-#		count += 1
-#	return count
+	while (GPIO.input(photores2) == GPIO.LOW):
+		count += 1
+	return count
 
-#def rc_time3(photores3):
-#	count=0
-#	GPIO.setup(photores3,GPIO.OUT)
-#	GPIO.output(photores3,GPIO.LOW)
-#	time.sleep(0.1)
+def rc_time3(photores3):
+	count=0
+	GPIO.setup(photores3,GPIO.OUT)
+	GPIO.output(photores3,GPIO.LOW)
+	time.sleep(0.1)
 
-#	GPIO.setup(photores3,GPIO.IN)
+	GPIO.setup(photores3,GPIO.IN)
 
-#	while (GPIO.input(photores3) == GPIO.LOW):
-#		count += 1
-#	return count
+	while (GPIO.input(photores3) == GPIO.LOW):
+		count += 1
+	return count
 
 def motor1_up():
 	for pin in ControlPin:
@@ -269,7 +269,7 @@ def capstone():
 	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
 
-	#Dose = int(message2_motor1)
+	Dose = int(message2_motor1)
 
 #/////////////////////////////////1
 	
@@ -278,7 +278,7 @@ def capstone():
 
 	lcd.message("Pill Name: " + message_motor1 + "\n" + "Take: " +  message2_motor1 + " pill")
 
-	if rc_time(photores) > 200000:
+	if rc_time(photores) > 10000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
@@ -316,7 +316,7 @@ def capstone2():
 	message_motor2 = firebase.get('/Current Schedule/Darel Diaz/Name2',None)
 	message2_motor2 = firebase.get('/Current Schedule/Darel Diaz/Dose2',None)
 
-	#Dose = int(message2_motor1)
+	Dose = int(message2_motor1)
 
 #/////////////////////////////////1
 	
@@ -325,7 +325,7 @@ def capstone2():
 
 	lcd.message("Pill Name: " + message_motor2 + "\n" + "Take: " +  message2_motor2 + " pill")
 
-	if rc_time(photores2) > 200000:
+	if rc_time(photores2) > 10000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
@@ -363,7 +363,7 @@ def capstone3():
 	message_motor3 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor3 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
 
-	#Dose = int(message2_motor1)
+	Dose = int(message2_motor1)
 
 #/////////////////////////////////1
 	
@@ -372,7 +372,7 @@ def capstone3():
 
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
 
-	if rc_time(photores3) > 200000:
+	if rc_time(photores3) > 10000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
