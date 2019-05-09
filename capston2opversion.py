@@ -54,11 +54,6 @@ please3 = firebase.get('/Current Schedule/Darel Diaz/Hours3',None)
 pilltime4= int(please3)
 
 
-message = ("Pill wasnt Taken")
-
-message2 = ("Pill was Taken")
-
-newqty = 0 
 
 def quantity():
 	quant = firebase.get('/Current Schedule/Darel Diaz/Qty1', None)
@@ -338,6 +333,7 @@ def capstone2():
 	
 
 	else:
+		newqty = 0 
 		qty = quantity()
 		newqty = Dose - qty
 
