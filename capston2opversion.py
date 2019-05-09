@@ -326,15 +326,15 @@ def capstone2():
 	lcd.message("Pill Name: " + message_motor2 + "\n" + "Take: " +  message2_motor2 + " pill")
 
 	if rc_time(photores2) > 200000:
-	time.sleep(5)
-	lcd.clear()
-	lcd.message('Times up')
-	firebase.post('/test',message)
+		time.sleep(5)
+		lcd.clear()
+		lcd.message('Times up')
+		firebase.post('/test',message)
 
 		#//////////////////////////////////2
-	moror2_down()
+		moror2_down()
 
-	lcd.clear()
+		lcd.clear()
 	
 
 	else:
@@ -346,7 +346,7 @@ def capstone2():
 
 		moror2_down()
 
-		///////////////////////////2
+		#///////////////////////////2
 
 	if newqty <= Dose:
 		lcd.message("Youre running out of pills \n Head to the pharmacy")
