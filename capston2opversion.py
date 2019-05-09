@@ -260,7 +260,9 @@ def moror3_down():
 
 def capstone():
 
-
+	
+	motor1_up()
+	
 	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
 
@@ -268,7 +270,7 @@ def capstone():
 
 #/////////////////////////////////1
 	
-	motor1_up()
+	
 
 
 	lcd.message("Pill Name: " + message_motor1 + "\n" + "Take: " +  message2_motor1 + " pill")
