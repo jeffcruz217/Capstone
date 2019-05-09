@@ -59,11 +59,14 @@ please3 = firebase.get('/Current Schedule/Darel Diaz/Hours3',None)
 
 pilltime4= int(please3)
 
-def buzzer():
+def buzzer_beep():
 	GPIO.output(buzzer,GPIO.HIGH)
     sleep(2) 
     GPIO.output(buzzer,GPIO.LOW)
     sleep(2)
+
+def buzzer_off()
+	GPIO.output(buzzer,GPIO.LOW)
 
 def quantity():
 	quant = firebase.get('/Current Schedule/Darel Diaz/Qty1', None)
@@ -292,10 +295,11 @@ def capstone():
 #/////////////////////////////////1
 	
 
-	buzzer()
+	buzzer_beep()
 	lcd.message("Pill Name: " + message_motor1 + "\n" + "Take: " +  message2_motor1 + " pill")
 	time.sleep(2)
-
+	buzzer_off()
+	
 	if rc_time(photores) > 30000:
 		time.sleep(5)
 		lcd.clear()
