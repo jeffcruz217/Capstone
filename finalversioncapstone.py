@@ -304,6 +304,8 @@ def capstone():
 		qty = quantity()
 		newqty = qty - Dose
 
+		strqty = str(newqty)
+
 		if newqty <= Dose:
 			lcd.message("Youre running out of pills \n Head to the pharmacy")
 
@@ -313,7 +315,7 @@ def capstone():
 			lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
 
 		#datatest = {"Qty1": newqty}
-		firebase.put('/Current Schedule/Darel Diaz', "Qty1", newqty)
+		firebase.put('/Current Schedule/Darel Diaz', "Qty1", strqty)
 
 		moror1_down()
 
@@ -354,7 +356,9 @@ def capstone2():
 		qty2 = quantity2()
 		newqty2 = qty2 - Dose2
 
-		if newqty2 <= Dose:
+		strqty2 = str(newqty2)
+
+		if newqty2 <= Dose2:
 			lcd.message("Youre running out of pills \n Head to the pharmacy")
 
 			lcd.clear()
@@ -363,7 +367,7 @@ def capstone2():
 			lcd.message("You have " + new2 + "pills" + "\n" + "of" + message_motor1)
 
 		#datatest2 = {"Qty2": newqty2}
-		firebase.put('/Current Schedule/Darel Diaz', "Qty2", newqty2)
+		firebase.put('/Current Schedule/Darel Diaz', "Qty2", strqty2)
 
 		moror2_down()
 
@@ -408,6 +412,8 @@ def capstone3():
 		qty3 = quantity3()
 		newqty3 = qty3 - Dose3
 
+		strqty3 = str(newqty3)
+
 		if newqty3 <= Dose3:
 			lcd.message("Youre running out of pills \n Head to the pharmacy")
 
@@ -417,7 +423,7 @@ def capstone3():
 			lcd.message("You have " + new3 + "pills" + "\n" + "of" + message_motor1)
 
 		#datatest3 = {"Qty3": newqty3}
-		firebase.put('/Current Schedule/Darel Diaz', "Qty3", newqty3)
+		firebase.put('/Current Schedule/Darel Diaz', "Qty3", strqty3)
 
 		moror3_down()
 
