@@ -1,6 +1,7 @@
     
 import RPi.GPIO as GPIO
 import time
+from time import sleep
 from Adafruit_CharLCD import Adafruit_CharLCD
 from firebase import firebase
 import schedule 
