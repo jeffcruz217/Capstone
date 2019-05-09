@@ -290,17 +290,19 @@ def capstone():
 		lcd.clear()
 	
 
-	#else:
-		#qty = quantity()
-		#newqty = Dose - qty
+	else:
+		qty = quantity()
+		newqty = Dose - qty
 
 		#firebase.post('/test',message2)
-		#firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+
+		moror1_down()
 
 		#///////////////////////////2
 
-	#if newqty <= Dose:
-		#lcd.message("Youre running out of pills \n Head to the pharmacy")
+	if newqty <= Dose:
+		lcd.message("Youre out of pills \n Head to the pharmacy")
 
 	else:
 		moror1_down()
@@ -323,7 +325,7 @@ def capstone2():
 
 	lcd.message("Pill Name: " + message_motor2 + "\n" + "Take: " +  message2_motor2 + " pill")
 
-	#if rc_time(photores2) > 200000:
+	if rc_time(photores2) > 200000:
 	time.sleep(5)
 	lcd.clear()
 	lcd.message('Times up')
@@ -335,22 +337,24 @@ def capstone2():
 	lcd.clear()
 	
 
-	#else:
-		#qty = quantity()
-		#newqty = Dose - qty
+	else:
+		qty = quantity()
+		newqty = Dose - qty
 
-		#firebase.post('/test',message2)
-		#firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+		firebase.post('/test',message2)
+		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
 
-		#///////////////////////////2
+		moror2_down()
 
-	#if newqty <= Dose:
-		#lcd.message("Youre running out of pills \n Head to the pharmacy")
+		///////////////////////////2
 
-	#else:
-	#moror2_down()
+	if newqty <= Dose:
+		lcd.message("Youre running out of pills \n Head to the pharmacy")
 
-	#lcd.clear()
+	else:
+	moror2_down()
+
+	lcd.clear()
 
 
 def capstone3():
@@ -368,7 +372,7 @@ def capstone3():
 
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
 
-	#if rc_time(photores3) > 200000:
+	if rc_time(photores3) > 200000:
 	time.sleep(5)
 	lcd.clear()
 	lcd.message('Times up')
@@ -380,22 +384,24 @@ def capstone3():
 	lcd.clear()
 	
 
-	#else:
-		#qty = quantity()
-		#newqty = Dose - qty
+	else:
+		qty = quantity()
+		newqty = Dose - qty
 
-		#firebase.post('/test',message2)
-		#firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+		firebase.post('/test',message2)
+		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+
+		moror3_down()
 
 		#///////////////////////////2
 
-	#if newqty <= Dose:
-		#lcd.message("Youre running out of pills \n Head to the pharmacy")
+	if newqty <= Dose:
+		lcd.message("Youre running out of pills \n Head to the pharmacy")
 
-	#else:
-	#	moror3_down()
+	else:
+		moror3_down()
 
-	#	lcd.clear()
+		lcd.clear()
 
 
 
