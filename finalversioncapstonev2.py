@@ -332,7 +332,7 @@ def capstone():
 		#datatest = {"Qty1": newqty}
 		firebase.put('/Current Schedule/Darel Diaz', "Qty1", strqty)
 
-		moror1_down()
+		motor1_up()
 
 		lcd.clear()
 		#///////////////////////////2
