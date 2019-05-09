@@ -355,7 +355,7 @@ def capstone2():
 	time.sleep(2)
 	buzzer_off()
 
-	if rc_time(photores2) > 20000:
+	if rc_time(photores2) > 30000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
