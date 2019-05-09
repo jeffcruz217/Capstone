@@ -295,7 +295,8 @@ def capstone():
 
 			lcd.clear()
 		else:
-			lcd.message("You have " + newqty + "pills" + "\n" + "of" + message_motor1)
+			new = str(newqty)
+			lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
 
 
 		newqty = firebase.post('/Current Schedule/Darel Diaz/Qty2', None)
