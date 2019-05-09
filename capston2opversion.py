@@ -262,7 +262,7 @@ def capstone():
 
 	
 	motor1_up()
-	
+
 	message_motor1 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor1 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
 
@@ -365,7 +365,7 @@ def capstone3():
 	message_motor3 = firebase.get('/Current Schedule/Darel Diaz/Name1',None)
 	message2_motor3 = firebase.get('/Current Schedule/Darel Diaz/Dose1',None)
 
-	Dose = int(message2_motor1)
+	Dose = int(message2_motor3)
 
 #/////////////////////////////////1
 	
