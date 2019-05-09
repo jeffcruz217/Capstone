@@ -37,9 +37,9 @@ ControlPin6 = [8,25,24,18]
 
 photores = 23
 
-photores2 = 9
+photores2 = 10
 
-photores3 = 10
+photores3 = 9
 
 buzzer = 3
 
@@ -413,6 +413,7 @@ def capstone3():
 	lcd.message("Pill Name: " + message_motor3 + "\n" + "Take: " +  message2_motor3 + " pill")
 	time.sleep(2)
 	buzzer_off()
+
 	if rc_time(photores3) > 20000:
 		time.sleep(5)
 		lcd.clear()
