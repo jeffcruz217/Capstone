@@ -298,7 +298,7 @@ def capstone():
 			lcd.message("You have " + newqty + "pills" + "\n" + "of" + message_motor1)
 
 
-		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+		newqty = firebase.post('/Current Schedule/Darel Diaz/Qty1', None)
 
 		moror1_down()
 
@@ -341,7 +341,7 @@ def capstone2():
 		newqty = Dose - qty
 
 		
-		firebase.post('/Current Schedule/Darel Diaz/Qty1', newqty)
+		newqty = firebase.post('/Current Schedule/Darel Diaz/Qty1', None)
 
 		moror2_down()
 
