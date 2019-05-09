@@ -299,7 +299,7 @@ def capstone():
 			lcd.message("You have " + new + "pills" + "\n" + "of" + message_motor1)
 
 
-		newqty = firebase.post('/Current Schedule/Darel Diaz/Qty2', None)
+		newqty = firebase.update('/Current Schedule/Darel Diaz/Qty2', None)
 
 		moror1_down()
 
