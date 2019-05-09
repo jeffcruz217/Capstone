@@ -275,7 +275,7 @@ def capstone():
 
 	lcd.message("Pill Name: " + message_motor1 + "\n" + "Take: " +  message2_motor1 + " pill")
 
-	if rc_time(photores) > 10000:
+	if rc_time(photores) > 30000:
 		time.sleep(5)
 		lcd.clear()
 		lcd.message('Times up')
