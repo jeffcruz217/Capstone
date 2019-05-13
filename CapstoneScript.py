@@ -1,4 +1,7 @@
-    
+#Pill Reminder, Capstone 2
+#Jeffrey R. Cruz Rodriguez = S00914944
+#Darel Diaz Ramos = S01045655
+
 import RPi.GPIO as GPIO
 import time
 from time import sleep
